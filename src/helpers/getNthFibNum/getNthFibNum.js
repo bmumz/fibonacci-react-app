@@ -1,10 +1,4 @@
 const getNthFibNum = (n) => {
-  if (n <= 0) {
-    throw Error("n cannot be 0 or a negative integer.");
-  }
-  if (n > 500) {
-    throw Error("n cannot be greater than 500.");
-  }
   if (n <= 1) {
     return n;
   }
