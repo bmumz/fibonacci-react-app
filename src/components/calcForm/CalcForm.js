@@ -16,14 +16,14 @@ const CalcForm = () => {
   const handleCalculation = (e) => {
     e.preventDefault();
 
-    if (value > 0) {
+    if (value > 0 && value < 501) {
       setError("");
 
       const calc = getFibList(value);
       setCalculation(calc);
     } else {
       setCalculation({});
-      setError("Integer must be greater than 0!");
+      setError("Integer must be between 0 & 500!");
     }
   };
 
