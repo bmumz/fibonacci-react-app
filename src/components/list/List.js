@@ -2,19 +2,16 @@ import PropTypes from "prop-types";
 
 const List = ({ items, className }) => {
   return (
-    <div>
-      {Object.entries(items).map(([key, value]) => (
-        <span
-          key={key}
-          className={className}
-          style={{
-            display: "flex",
-          }}
-        >
-          {key}:{value}
-        </span>
-      ))}
-    </div>
+    <table className={className}>
+      <tbody>
+        {Object.entries(items).map(([key, value]) => (
+          <tr key={key}>
+            <td className={`${className}__key`}>{key}:</td>
+            <td> {value}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 };
 

@@ -1,0 +1,33 @@
+.about,
+.about__img {
+  @include flex-row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.about__img {
+  width: 25vw;
+  flex: 3 2 30ch;
+  height: calc(35vw);
+  overflow: hidden;
+  img {
+    max-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}
+
+.about {
+  overflow: hidden;
+  line-height: 1.5;
+  letter-spacing: 2;
+  h3 {
+    font-size: $m-size;
+    margin: $s-size 0;
+    @include flex-row;
+    justify-content: center;
+  }
+}
