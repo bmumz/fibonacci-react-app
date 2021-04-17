@@ -1,4 +1,4 @@
-import getNthFibNum from "./getNthFibNum";
+import getNthFibNum from "../getNthFibNum";
 
 const getFibList = (n) => {
   let fibs = {};
