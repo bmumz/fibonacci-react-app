@@ -28,24 +28,24 @@ const CalcForm = () => {
   };
 
   return (
-    <div>
+    <div className="form">
       <form onSubmit={handleCalculation}>
         <FormInput
           name="number"
-          label="Enter a number from 0-500:"
+          label="Pick a number:"
           type="text"
           placeholder="Enter number..."
           value={value || ""}
           pattern="[0-9]*"
           maxLength={3}
           onChange={onChange}
-          className=""
-          error={error}
+          className="form__input"
         />
         <button type="submit">Calculate!</button>
       </form>
+      {error && <p className="form__error">{error}</p>}
       <div>
-        <List items={calculation} />
+        <List items={calculation} className="fibList" />
       </div>
     </div>
   );

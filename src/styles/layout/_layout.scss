@@ -1,0 +1,17 @@
+.layout {
+  width: 75vw;
+  @include flex-col;
+  margin: 0 auto;
+  background: #f5e2c5; /* fallback for old browsers */
+  padding: $l-size;
+  margin: $xl-size;
+  border-radius: $m-size;
+  p {
+    margin: $s-size 0;
+  }
+}
+
+.heading {
+  text-transform: uppercase;
+  text-align: center;
+}

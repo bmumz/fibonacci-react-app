@@ -10,9 +10,8 @@ const FormInput = ({
   onChange,
   pattern,
   className,
-  error,
 }) => (
-  <div>
+  <div className="input">
     <label htmlFor={name}>{label}</label>
     <input
       type={type}
@@ -23,7 +22,6 @@ const FormInput = ({
       onChange={onChange}
       className={className}
     />
-    {error && <p style={{ color: "red" }}>{error}</p>}
   </div>
 );
 
@@ -37,7 +35,6 @@ FormInput.propTypes = {
   onChange: PropTypes.func.isRequired,
   pattern: PropTypes.string,
   className: PropTypes.string,
-  error: PropTypes.string,
 };
 
 export default FormInput;
